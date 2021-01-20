@@ -1,6 +1,6 @@
 # How to run a Kivy app on your Raspberry PI
 
-## Kivy requires python 3.6 or greater on your machine, we will first be installing Python 3.8.0
+## Installing Python 3.8
 
 1. Open terminal and run: 
 
@@ -16,11 +16,13 @@
 
 4. Extract and Install Python 3.8:
 
-	```sudo tar zxf Python-3.8.0.tgz```
-	```cd Python-3.8.0```
-	```sudo ./configure --enable-optimizations```
-	```sudo make -j 4```
-	```sudo make altinstall```
+	```
+	sudo tar zxf Python-3.8.0.tgz
+	cd Python-3.8.0
+	sudo ./configure --enable-optimizations
+	sudo make -j 4
+	sudo make altinstall
+	```
 
 5. Ensure that Python 3.8 has been installed:
 
@@ -28,8 +30,10 @@
 
 6. Make Python 3.8 the default:
 
-	```echo "alias python=/usr/local/bin/python3.8" >> ~/.bashrc```
-	```source ~/.bashrc```
+	```
+	echo "alias python=/usr/local/bin/python3.8" >> ~/.bashrc
+	source ~/.bashrc
+	```
 
 7. Ensure that Python 3.8 is the default:
 
