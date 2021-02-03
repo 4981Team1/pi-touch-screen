@@ -1,0 +1,45 @@
+<Button>:
+	size_hint: 0.5, 0.3
+
+<Label>:
+	size_hint: 0.5, 0.3
+
+<TextInput>:
+	size_hint: 0.5, 0.3
+
+<MyFloat>:
+	name: name
+	email: email
+	userinput: userinput
+
+	FloatLayout:
+		size: root.width, root.height	
+		Label:
+			text: "Name:"
+			pos_hint: {"x":0, "top":1}
+
+		TextInput:
+			id: name
+			pos_hint: {"x":0.5, "top":1}
+			multiline: False
+
+		Label:
+			text: "Email:"
+			pos_hint: {"x":0, "top":0.7}
+
+		TextInput:
+			id: email
+			pos_hint: {"x":0.5, "top":0.7}
+			multiline: False
+
+		Button:
+			text: "Submit"
+			pos_hint: {"x":0, "top":0.4}
+			on_press: root.btn()
+			size_hint: 0.5, 0.4
+
+		Label:
+			id: userinput
+			pos_hint: {"x":0.5, "top":0.4}
+			text: ""
+			size_hint: 0.5, 0.4
