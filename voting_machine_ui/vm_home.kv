@@ -1,0 +1,79 @@
+WindowManager:
+	VM_Home:
+	VM_Election_List:
+	VM_Election_Det:
+
+<VM_Home>:
+	name: "election_home"
+	pin: pin
+	msg: msg
+	GridLayout:
+		cols: 1
+		size: root.width * 0.8, root.height * 0.8
+		Label:
+			text: ""
+
+		Label:			
+			text: "Enter Pin"
+			halign: 'center'
+			valign: 'bottom'
+			size: root.width, root.height / 12
+			size_hint: None, None
+
+		GridLayout:
+			cols: 3
+			
+			Label:
+				text: ""
+				size: root.width / 4, root.height / 12
+				size_hint: None, None
+
+			TextInput:
+				halign: 'center'
+				valign: 'middle'
+				id: pin
+				size: root.width / 2, root.height / 14
+				size_hint: None, None
+
+			Label:
+				text: ""
+				size: root.width / 4, root.height / 12
+				size_hint: None, None
+			
+		GridLayout:
+			cols: 4
+
+			Label:
+				text: ""
+				size: root.width / 4, root.height / 10
+				size_hint: None, None
+
+			Label:
+				text: ""
+				id: msg
+				size: root.width / 4, root.height / 10
+				size_hint: None, None
+
+			Button:
+				text: "Submit"
+				valign: 'top'
+				on_release:
+					root.process_pin()
+								
+				size: root.width / 4, root.height / 12
+				size_hint: None, None
+
+			Label:
+				text: ""
+				size: root.width / 4, root.height / 10
+				size_hint: None, None
+	
+<VM_Election_List>:
+	name: "election_list"
+	GridLayout:
+		id: grid
+		cols: 1
+
+<VM_Election_Det>:
+	name: "election_det"
+	
