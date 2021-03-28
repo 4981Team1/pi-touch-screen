@@ -15,6 +15,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from functools import partial
 from kivy.lang import Builder
 from kivy.clock import Clock
+from kivy.config import Config
 
 import json
 import requests
@@ -29,6 +30,9 @@ class VM_Home(Screen):
     email = ObjectProperty(None)
     msg = ObjectProperty(None)
     userId = ObjectProperty(None)
+    
+    def exit_btn(self):
+        exit()
     
     def on_enter(self):
         elec_id = 0
@@ -331,4 +335,8 @@ class VM_HomeApp(App):
         return kv
 
 if __name__ == "__main__":
+    Config.set('graphics', 'fullscreen', 'auto')
+    Config.set('graphics', 'window_state', 'maximized')
+    Config.write()
+
     VM_HomeApp().run()

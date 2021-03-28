@@ -72,14 +72,23 @@ WindowManager:
 		GridLayout:
 			cols: 4
 
-			Label:
-				text: ""
-				size: root.width / 4, root.height / 10
+			Button:
+				text: "Exit"
+				valign: 'top'
+				on_release:
+					root.exit_btn()
+								
+				size: root.width / 4, root.height / 12
 				size_hint: None, None
 
 			Label:
 				text: ""
 				id: msg
+				size: root.width / 4, root.height / 10
+				size_hint: None, None	
+
+			Label:
+				text: ""
 				size: root.width / 4, root.height / 10
 				size_hint: None, None
 
@@ -90,11 +99,6 @@ WindowManager:
 					root.process_pin()
 								
 				size: root.width / 4, root.height / 12
-				size_hint: None, None
-
-			Label:
-				text: ""
-				size: root.width / 4, root.height / 10
 				size_hint: None, None
 	
 <VM_Election_List>:
