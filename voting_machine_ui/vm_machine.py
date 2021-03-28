@@ -42,9 +42,7 @@ class VM_Home(Screen):
         index_choice = 0
         token = 0
     
-    def process_pin(self):
-        self.email.text = "testjeff@example.com"
-        self.pin.text = "12345"        
+    def process_pin(self):      
         sendObj = {}
         sendObj['email'] = self.email.text
         sendObj['password'] = self.pin.text
