@@ -2,11 +2,13 @@ WindowManager:
 	VM_Home:
 	VM_Election_List:
 	VM_Election_Det:
+	VM_Vote_Confirm:
 
 <VM_Home>:
 	name: "election_home"
 	pin: pin
 	msg: msg
+	email: email
 	GridLayout:
 		cols: 1
 		size: root.width * 0.8, root.height * 0.8
@@ -14,7 +16,34 @@ WindowManager:
 			text: ""
 
 		Label:			
-			text: "Enter Pin"
+			text: "Email:"
+			halign: 'center'
+			valign: 'bottom'
+			size: root.width, root.height / 12
+			size_hint: None, None
+
+		GridLayout:
+			cols: 3
+			
+			Label:
+				text: ""
+				size: root.width / 4, root.height / 12
+				size_hint: None, None
+
+			TextInput:
+				halign: 'center'
+				valign: 'middle'
+				id: email
+				size: root.width / 2, root.height / 14
+				size_hint: None, None
+
+			Label:
+				text: ""
+				size: root.width / 4, root.height / 12
+				size_hint: None, None
+
+		Label:			
+			text: "Password:"
 			halign: 'center'
 			valign: 'bottom'
 			size: root.width, root.height / 12
@@ -82,4 +111,24 @@ WindowManager:
 
 <VM_Election_Det>:
 	name: "election_det"
-	
+	BoxLayout:
+		orientation: 'vertical'
+		ScrollView:
+			size_hint: 1,root.height
+			GridLayout:
+				height: self.minimum_height
+				size_hint_y: None
+				id: grid
+				cols: 1
+
+<VM_Vote_Confirm>:
+	name: "vote_confirm"
+	BoxLayout:
+		orientation: 'vertical'
+		ScrollView:
+			size_hint: 1,root.height
+			GridLayout:
+				height: self.minimum_height
+				size_hint_y: None
+				id: grid
+				cols: 1
