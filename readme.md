@@ -40,6 +40,8 @@
 	```python -V```
 
 	note: the output should be "Python 3.8.0"
+	
+## Installing Kivy
+Next install [kivy](https://kivy.org/doc/stable/gettingstarted/installation.html) and its [dependencies](https://kivy.org/doc/stable/installation/installation-rpi.html#install-source-rpi). Instructions are taken from the following kivy documentation links
 
-Next we will be installing [kivy](https://kivy.org/doc/stable/gettingstarted/installation.html) and its [dependencies](https://kivy.org/doc/stable/installation/installation-rpi.html#install-source-rpi). Instructions are taken from the following kivy documentation links
-
+## Running The Program
