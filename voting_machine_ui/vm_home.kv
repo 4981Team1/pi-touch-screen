@@ -19,6 +19,7 @@ WindowManager:
 			text: "Email:"
 			halign: 'center'
 			valign: 'bottom'
+			font_size: 50
 			size: root.width, root.height / 12
 			size_hint: None, None
 
@@ -36,6 +37,7 @@ WindowManager:
 				id: email
 				size: root.width / 2, root.height / 14
 				size_hint: None, None
+				font_size: self.height / 1.5
 
 			Label:
 				text: ""
@@ -44,6 +46,7 @@ WindowManager:
 
 		Label:			
 			text: "Password:"
+			font_size: 50
 			halign: 'center'
 			valign: 'bottom'
 			size: root.width, root.height / 12
@@ -63,6 +66,7 @@ WindowManager:
 				id: pin
 				size: root.width / 2, root.height / 14
 				size_hint: None, None
+				font_size: self.height / 1.5
 
 			Label:
 				text: ""
